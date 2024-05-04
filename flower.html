@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+  <div class="container text-center text-white">
+    <div class="greeting-container mb-4">
+      <h1 class="greeting">Hello, user!</h1>
+      <h2 class="sub-greeting">Welcome to our flower animation.</h2>
+    </div>
+    <!-- Bootstrap input field for the user's name -->
+    <div class="form-group ">
+        <label for="nameInput" class="text-white">Enter your name:</label>
+        <div class="d-flex justify-content-center width=100"> <!-- Adjust the width as needed -->
+          <input type="text" class="form-control" id="nameInput" placeholder="Your name">
+        </div>
+      </div>
+      
+   
+    <!-- Button for navigating to a new page -->
+    <button type="button" class="btn btn-primary" onclick="window.location.href='welcome.html';">CLICK ME</button>
+  </div>
+  <div class="flower">
+    <div class="petal" style="top: 0; left: 25px;"></div>
+    <div class="petal" style="top: 25px; left: 0;"></div>
+    <div class="petal" style="top: 25px; right: 0;"></div>
+    <div class="petal" style="bottom: 0; left: 25px;"></div>
+  </div>
+</body>
+</html>
