@@ -1,5 +1,5 @@
 // The text to be animated
-const textToAnimate = "Semoga Hari Lahir ini membawa sinar bahagia dalam hidupmu sebagaimana sinar matahari yang menerangi bumi setiap pagi. Semoga setiap langkah yang kau lalui dipenuhi dengan keberkatan dan rahmat Allah.";
+const textToAnimate = "Semoga Hari Lahir ini membawa sinar bahagia dalam hidupmu sebagaimana sinar matahari yang menerangi bumi setiap pagi. Semoga setiap langkah yang kau lalui dipenuhi dengan keberkatan dan rahmat Ilahi.";
 
 // The element where the animated text will be displayed
 const wishesTextElement = document.getElementById('wishes-text');
