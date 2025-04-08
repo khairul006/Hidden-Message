@@ -1,0 +1,170 @@
+/* Body Styling */
+#wishes-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Fade-in Effect for Content */
+.wishes-container,
+.greet-container {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.greet-container { 
+    display: flex; /* Enable flexbox to center content inside */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 100px;
+  }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Butterflies flying effect */
+.butterfly {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../../../assets/butterfly.gif') no-repeat center center;
+    background-size: cover;
+    animation: flyButterfly 8s infinite ease-in-out;
+}
+
+@keyframes flyButterfly {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) translateX(200px);
+        opacity: 0;
+    }
+}
+
+/* Sparkles (stars) animation */
+@keyframes twinklingStars {
+
+    0%,
+    100% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('../../../assets/sparkles.gif') repeat;
+    animation: twinklingStars 2s infinite alternate;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Styling the wishes container */
+.wishes-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* The GIFs */
+.flower-gif {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.flower-gif:hover {
+    transform: scale(1.05);
+}
+
+.instruction {
+    font-size: 1rem;
+    color: #4e342e;
+    font-style: italic;
+}
+
+.author-note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #6d4c41;
+}
+
+/* Subtle Glow for the title */
+.comforter-brush-regular {
+    font-family: "Comforter Brush", cursive;
+    font-weight: 400;
+    font-size: 110px;
+    color: #ff6f61;
+    text-shadow: 2px 2px 10px rgba(255, 105, 97, 0.8);
+}
+
+/* Subheader Styling */
+.subheader {
+    color: #6d4c41;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* MUSIC WIDGET */
+/* Styling the CD player-style button */
+#cd-player {
+    width: 100px;
+    /* Set the width of the image */
+    height: 100px;
+    /* Set the height of the image */
+    cursor: pointer;
+    /* Make the image act as a clickable button */
+    position: fixed;
+    /* Use fixed positioning */
+    bottom: 20px;
+    /* Distance from the bottom of the page */
+    right: 20px;
+    /* Distance from the right side of the page */
+    transition: filter 0.3s;
+    /* Smooth transition for filter change */
+}
+
+/* Grey filter when paused */
+#cd-player.paused {
+    filter: grayscale(100%);
+    /* Grayscale the image when paused */
+}

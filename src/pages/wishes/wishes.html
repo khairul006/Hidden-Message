@@ -2,44 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Wishes Animation</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="wishes.js" defer></script> <!-- Link to the JavaScript file -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Wishes</title>
+  <link rel="stylesheet" href="wishes.css" />
+  <script src="wishes.js" defer></script>
+
+  <!-- Font for dreamy title -->
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet" />
 </head>
 
 <body id="wishes-page">
+  <div class="greet-container">
+    <h1 class="comforter-brush-regular">Selamat Hari Lahir!</h1>
+    <h2 class="subheader">To My Special One</h2>
+  </div>
 
-    <div class="greet-container"></div>
-        <h1 class="comforter-brush-regular">Selamat Hari Lahir!</h1>
+  <div class="flower-section">
+    <img
+      class="flower-gif"
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExajV1c2RqMWs1dW4wc3g3amM0YWlmOWNjem55MTNxOWtsdWkxZWd2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QZPmy4WMaj65uxO/giphy.gif"
+      alt="Flower with Butterfly"
+      onclick="window.location.href='../message/message.html';"
+    />
+    <p class="instruction">Catch the butterfly... click it gently</p>
+  </div>
 
-        <h2>Special One</h2>
+  <div class="wishes-container">
+    <div id="wishes-text" class="wishes-text"></div>
+    <p class="author-note">by @kaionnimbus</p>
+  </div>
 
-        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExajV1c2RqMWs1dW4wc3g3amM0YWlmOWNjem55MTNxOWtsdWkxZWd2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QZPmy4WMaj65uxO/giphy.gif" 
-        alt="Flower of butterfly for you" onclick="window.location.href='message.html';">
-    </div>
+  <!-- Background Music -->
+  <audio id="background-music" autoplay loop>
+    <source src="../../../assets/kaiju-nobody-acoustic.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
 
-    <div class="wishes-container">
-        <div id="wishes-text" class="wishes-text"></div>
-        <p>by @kaionnimbus</p>
-    </div>
-
-    <audio id="background-music" autoplay loop>
-        <source src="assets\kaiju-nobody-acoustic.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
-    <!-- CD player-style button (GIPHY GIF embedded with iframe) -->
-    <img id="cd-player" src="https://media.giphy.com/media/f6gEGSAsoMHh4vW5jB/giphy.gif" alt="CD Player GIF" />
-
-    <p style="color:black">Catch the butterfly ...</p>
-    <p style="color: rgb(180, 143, 96);"> click it ...</p>
-
+  <!-- CD Player Button -->
+  <img
+    id="cd-player"
+    src="https://media.giphy.com/media/f6gEGSAsoMHh4vW5jB/giphy.gif"
+    alt="CD Player"
+  />
 </body>
-
 </html>

@@ -1,64 +1,57 @@
-// The text to be animated
-const textToAnimate = "Semoga Hari Lahir ini membawa sinar bahagia dalam hidupmu sebagaimana sinar matahari yang menerangi bumi setiap pagi. Semoga setiap langkah yang kau lalui dipenuhi dengan keberkatan dan rahmat Ilahi.";
+document.addEventListener("DOMContentLoaded", () => {
+    // Animated Wishes Text
+    const textToAnimate =
+        "Semoga Hari Lahir ini membawa sinar bahagia dalam hidupmu, sebagaimana sinar mentari menerangi pagi. Semoga setiap langkahmu penuh keberkatan dan cinta. 💛";
 
-// The element where the animated text will be displayed
-const wishesTextElement = document.getElementById('wishes-text');
+    const wishesTextElement = document.getElementById("wishes-text");
+    let currentIndex = 0;
 
-// Variables to keep track of the current letter index and the interval
-let currentLetterIndex = 0;
-let intervalId;
-
-// Function to animate the text
-function animateText() {
-    // Add the next letter to the element
-    wishesTextElement.textContent += textToAnimate[currentLetterIndex];
-    
-    // Increment the current letter index
-    currentLetterIndex++;
-    
-    // If the current letter index reaches the end of the text, stop the interval
-    if (currentLetterIndex >= textToAnimate.length) {
-        clearInterval(intervalId);
-    }
-}
-
-// Start the interval to animate the text, displaying one letter every 150 milliseconds
-intervalId = setInterval(animateText, 90);
-
-
-
-// MUSIC
-// Namespace for the music functionality
-const musicNamespace = {
-    audio: document.getElementById('background-music'),
-    cdPlayer: document.getElementById('cd-player'),
-
-    // Function to toggle play/pause and update the image
-    togglePlayPause: function() {
-        if (this.audio.paused) {
-            // Play the audio
-            this.audio.play();
-            // Remove 'paused' class from the image to remove grey filter
-            this.cdPlayer.classList.remove('paused');
-        } else {
-            // Pause the audio
-            this.audio.pause();
-            // Add 'paused' class to the image to apply grey filter
-            this.cdPlayer.classList.add('paused');
+    function animateText() {
+        if (currentIndex < textToAnimate.length) {
+            wishesTextElement.textContent += textToAnimate[currentIndex];
+            currentIndex++;
+            setTimeout(animateText, 70); // smoother typing feel
         }
-    },
-
-    // Initialize event listeners
-    init: function() {
-        // Add click event listener to the GIF image
-        this.cdPlayer.addEventListener('click', (event) => {
-            // Call togglePlayPause function when image is clicked
-            this.togglePlayPause();
-            // Prevent click event from propagating to other elements
-            event.stopPropagation();
-        });
     }
-};
 
-// Initialize the music functionality when the script is loaded
-musicNamespace.init();
+    animateText();
+
+    // MUSIC CONTROLLER
+    const audio = document.getElementById("background-music");
+    const cdPlayer = document.getElementById("cd-player");
+
+    cdPlayer.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            cdPlayer.classList.remove("paused");
+        } else {
+            audio.pause();
+            cdPlayer.classList.add("paused");
+        }
+    });
+
+    // Add grayscale if music is initially paused
+    if (audio.paused) {
+        cdPlayer.classList.add("paused");
+    }
+
+    // Generating butterflies
+    const butterflyCount = 5; // Adjust the number of butterflies
+    for (let i = 0; i < butterflyCount; i++) {
+        createButterfly();
+    }
+
+    function createButterfly() {
+        const butterfly = document.createElement("div");
+        butterfly.classList.add("butterfly");
+        document.body.appendChild(butterfly);
+
+        // Randomize butterfly position
+        butterfly.style.top = `${Math.random() * 100}vh`;
+        butterfly.style.left = `${Math.random() * 100}vw`;
+
+        // Randomize animation timing
+        const animationDuration = Math.random() * (10 - 6) + 6; // 6 to 10 seconds
+        butterfly.style.animationDuration = `${animationDuration}s`;
+    }
+});
