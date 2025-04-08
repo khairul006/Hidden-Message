@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Sweet Surprise 🌸</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <div class="container">
+    <h1>Welcome to Your Surprise</h1>
+    <p>Can you guess who this is for? Enter your name:</p>
+    <input type="text" id="nameInput" placeholder="君の名は"><br>
+    <button id="myButton">Hmmmm Noooo!</button>
+    <button id="nextButton" onclick="window.location.href='wishes.html';">Get Hidden Message 💝</button>
+    <p id="note">Pssst... try entering your real name 👀</p>
+  </div>
 
-<body id="welcome-pages">
-    <div class="container">
-        <h1>Welcome to the <br>Hidden Message!</h1>
-        <p>Enter your name:</p>
-        <input type="text" id="nameInput" placeholder="君の名は"><br><br>
-        <!-- Add the button here -->
-        <button id="myButton">Hmmmm Noooo!</button>
-        <button id="nextButton" onclick="window.location.href='wishes.html';">Get Hidden Message</button>
-    </div>
-
-    <script src="script.js"></script>
-    
+  <script src="script.js"></script>
 </body>
-
 </html>

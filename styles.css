@@ -1,61 +1,69 @@
 /* Center the content in the middle of the page */
 
 /* Background color for Page 2 */
-body#welcome-pages {
-  background-color: #c68d87; /* Misty rose */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body {
   margin: 0;
-  background-color: #051b2f; /* Light background color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* peach to soft orange */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #2e2e2e;
+  text-align: center;
 }
 
 .container {
-  text-align: center;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3e2723; /* Deep warm brown */
 }
 
-p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-input[type="text"] {
-  width: 200px;
+input {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   font-size: 1rem;
-  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  background: #fffaf5;
+  color: #2e2e2e;
 }
 
-/* Styling for the button */
 button {
-    padding: 10px 20px; /* Padding inside the button */
-    font-size: 1rem; /* Font size */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #007bff; /* Blue background color */
-    color: white; /* White text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition effect for hover */
-    margin: 5px;
-    width: 200px;
-    position: relative;
-    
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+#myButton {
+  background-color: #ff8a65; /* Coral */
+  color: white;
 }
+
+#nextButton {
+  background-color: #fdd835; /* Warm golden */
+  color: #3e2723;
+  display: none;
+}
+
+#note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #5d4037;
+}
+
 
 
 /* CSS STYLING FOR wishes.html*/
