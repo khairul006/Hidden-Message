@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Birthday Wishes</title>
   <link rel="stylesheet" href="wishes.css" />
   <script src="wishes.js" defer></script>
@@ -14,24 +14,24 @@
 </head>
 
 <body id="wishes-page">
-  <div class="greet-container">
-    <h1 class="comforter-brush-regular">Selamat Hari Lahir!</h1>
-    <h2 class="subheader">To My Special One</h2>
-  </div>
-
-  <div class="flower-section">
-    <img
-      class="flower-gif"
-      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExajV1c2RqMWs1dW4wc3g3amM0YWlmOWNjem55MTNxOWtsdWkxZWd2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QZPmy4WMaj65uxO/giphy.gif"
-      alt="Flower with Butterfly"
-      onclick="window.location.href='../message/message.html';"
-    />
-    <p class="instruction">Catch the butterfly... click it gently</p>
-  </div>
-
-  <div class="wishes-container">
-    <div id="wishes-text" class="wishes-text"></div>
-    <p class="author-note">by @kaionnimbus</p>
+  <div class="feed-layout">
+    <div class="image-box">
+      <img
+        class="flower-gif"
+        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExajV1c2RqMWs1dW4wc3g3amM0YWlmOWNjem55MTNxOWtsdWkxZWd2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QZPmy4WMaj65uxO/giphy.gif"
+        alt="Flower with Butterfly"
+        onclick="window.location.href='../message/message.html';"
+      />
+      <p class="instruction">Catch the butterfly... click it gently</p>
+    </div>
+  
+    <div class="wishes-box glass-blur">
+      <h1 class="comforter-brush-regular">Selamat Hari Lahir!</h1>
+      <div class="wishes-text">
+        <p>Happy birthday! Harap hari ni ada benda-benda kecik yang buat kau senyum — drive pergi kerja smooth ja, radio mainkan lagu feveret kau, atau mesej random dari aku ni. Moga makin tua makin chill, bukan makin pressure. Dunia boleh jadi serabut, tapi harap kau tetap jumpa tenang sikit-sikit. 🎉🦋</p>
+        <p class="author-note">by @khairul</p>
+      </div>
+    </div>
   </div>
 
   <!-- Background Music -->
@@ -41,10 +41,11 @@
   </audio>
 
   <!-- CD Player Button -->
-  <img
-    id="cd-player"
-    src="https://media.giphy.com/media/f6gEGSAsoMHh4vW5jB/giphy.gif"
-    alt="CD Player"
-  />
+  <img id="cd-player" src="https://media.giphy.com/media/f6gEGSAsoMHh4vW5jB/giphy.gif" alt="CD Player" />
+
+  <!-- Scattered Butterflies -->
+  <div class="butterfly-container"></div>
+
 </body>
+
 </html>

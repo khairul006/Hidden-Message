@@ -20,20 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const audio = document.getElementById("background-music");
     const cdPlayer = document.getElementById("cd-player");
 
-    cdPlayer.addEventListener("click", () => {
+    if (audio && cdPlayer) {
+        // Toggle play/pause when clicking the CD player
+        cdPlayer.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();  // Play the audio
+                cdPlayer.classList.remove("paused");  // Remove grayscale
+            } else {
+                audio.pause();  // Pause the audio
+                cdPlayer.classList.add("paused");  // Add grayscale
+            }
+        });
+
+        // Add grayscale if music is initially paused
         if (audio.paused) {
-            audio.play();
-            cdPlayer.classList.remove("paused");
-        } else {
-            audio.pause();
             cdPlayer.classList.add("paused");
         }
-    });
-
-    // Add grayscale if music is initially paused
-    if (audio.paused) {
-        cdPlayer.classList.add("paused");
+    } else {
+        console.error("Audio or CD player element not found.");
     }
+
 
     // Generating butterflies
     const butterflyCount = 5; // Adjust the number of butterflies
