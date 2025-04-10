@@ -161,16 +161,16 @@ body#wishes-page {
 /* MUSIC WIDGET */
 /* Styling the CD player-style button */
 #cd-player {
-    width: 100px; /* Set the width of the image */
-    height: 100px; /* Set the height of the image */
-    cursor: pointer; /* Make the image act as a clickable button */
-    position: fixed; /* Use fixed positioning */
-    bottom: 20px; /* Distance from the bottom of the page */
-    right: 20px; /* Distance from the right side of the page */
-    transition: filter 0.3s; /* Smooth transition for filter change */
-  }
-  
-  /* Grey filter when paused */
-  #cd-player.paused {
-    filter: grayscale(100%); /* Grayscale the image when paused */
-  }
+  width: 100px; /* Set the width of the image */
+  height: 100px; /* Set the height of the image */
+  cursor: pointer; /* Make the image act as a clickable button */
+  position: fixed; /* Use fixed positioning */
+  bottom: 20px; /* Distance from the bottom of the page */
+  right: 20px; /* Distance from the right side of the page */
+  transition: filter 0.3s; /* Smooth transition for filter change */
+}
+
+/* Grey filter when paused */
+#cd-player.paused {
+  filter: grayscale(100%); /* Grayscale the image when paused */
+}

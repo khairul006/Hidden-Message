@@ -1,46 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Animated Wishes Text
-    const textToAnimate =
-        "Semoga Hari Lahir ini membawa sinar bahagia dalam hidupmu, sebagaimana sinar mentari menerangi pagi. Semoga setiap langkahmu penuh keberkatan dan cinta. 💛";
+    
+    // MUSIC
+    // Namespace for the music functionality
+    const musicNamespace = {
+        audio: document.getElementById('background-music'),
+        cdPlayer: document.getElementById('cd-player'),
 
-    const wishesTextElement = document.getElementById("wishes-text");
-    let currentIndex = 0;
-
-    function animateText() {
-        if (currentIndex < textToAnimate.length) {
-            wishesTextElement.textContent += textToAnimate[currentIndex];
-            currentIndex++;
-            setTimeout(animateText, 70); // smoother typing feel
-        }
-    }
-
-    animateText();
-
-    // MUSIC CONTROLLER
-    const audio = document.getElementById("background-music");
-    const cdPlayer = document.getElementById("cd-player");
-
-    if (audio && cdPlayer) {
-        // Toggle play/pause when clicking the CD player
-        cdPlayer.addEventListener("click", () => {
-            if (audio.paused) {
-                audio.play();  // Play the audio
-                cdPlayer.classList.remove("paused");  // Remove grayscale
+        // Function to toggle play/pause and update the image
+        togglePlayPause: function () {
+            if (this.audio.paused) {
+                // Play the audio
+                this.audio.play();
+                // Remove 'paused' class from the image to remove grey filter
+                this.cdPlayer.classList.remove('paused');
             } else {
-                audio.pause();  // Pause the audio
-                cdPlayer.classList.add("paused");  // Add grayscale
+                // Pause the audio
+                this.audio.pause();
+                // Add 'paused' class to the image to apply grey filter
+                this.cdPlayer.classList.add('paused');
             }
-        });
+        },
 
-        // Add grayscale if music is initially paused
-        if (audio.paused) {
-            cdPlayer.classList.add("paused");
+        // Initialize event listeners
+        init: function () {
+            // Add click event listener to the GIF image
+            this.cdPlayer.addEventListener('click', (event) => {
+                // Call togglePlayPause function when image is clicked
+                this.togglePlayPause();
+                // Prevent click event from propagating to other elements
+                event.stopPropagation();
+            });
         }
-    } else {
-        console.error("Audio or CD player element not found.");
-    }
+    };
 
-
+    // Initialize the music functionality when the script is loaded
+    musicNamespace.init();
     // Generating butterflies
     const butterflyCount = 5; // Adjust the number of butterflies
     for (let i = 0; i < butterflyCount; i++) {
