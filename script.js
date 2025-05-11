@@ -1,5 +1,5 @@
 // List of allowed names (all lowercase for comparison)
-const allowedNames = ["izzah", "nurul izzah", "izzah noordin", "izzahnoordin", "crush"];
+const allowedNames = ["name"];
 
 // Get DOM elements
 const nameInput = document.getElementById('nameInput');
@@ -10,7 +10,7 @@ const nextButton = document.getElementById('nextButton');
 myButton.addEventListener('click', () => {
   myButton.style.padding = '5px 10px';
   myButton.style.fontSize = '0.8rem';
-  myButton.innerText = "Still Nooo 🙈";
+  myButton.innerText = "Still Nooo";
 
   const enteredName = nameInput.value.trim().toLowerCase();
 
